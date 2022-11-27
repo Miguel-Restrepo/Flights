@@ -1,0 +1,57 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <form [formGroup]="formJourney" (ngSubmit)="calculateRoute()">
+              <div class="mb-md-5 mt-md-4 pb-5">
+
+                <h2 class="fw-bold mb-2 text-uppercase">Journey</h2>
+
+
+                <div class="form-outline form-white mb-4">
+                  <input style="text-transform:uppercase"  maxlength="3"  formControlName="origin" type="text" id="typeEmailX" class="form-control form-control-lg" />
+                  <label class="form-label" for="typeEmailX">Origin</label>
+                  <div class="msjValidation"
+                    *ngIf="(getFV['origin'].errors && (getFV['origin'].dirty || getFV['origin'].touched))">
+                    <strong>requerido</strong>
+                  </div>
+                  <div class="msjValidation"
+                    *ngIf="(getFV['origin'].value.length!=3 && (getFV['origin'].dirty || getFV['origin'].touched))">
+                    <strong>must be 3 in length</strong>
+                  </div>
+                </div>
+                <div class="form-outline form-white mb-4">
+                  <input  style="text-transform:uppercase"  maxlength="3" formControlName="destination" type="text" id="typeEmailX"
+                    class="form-control form-control-lg" />
+                  <label class="form-label" for="typeEmailX">Destination</label>
+                  <div class="msjValidation"
+                    *ngIf="(getFV['destination'].errors && (getFV['destination'].dirty || getFV['destination'].touched))">
+                    <strong>requerido
+                      {{getFV['destination'].errors}}
+                    </strong>
+                  </div>
+                  <div class="msjValidation"
+                  *ngIf="(getFV['destination'].value.length!=3 && (getFV['destination'].dirty || getFV['destination'].touched))">
+                  <strong>must be 3 in length</strong>
+                </div>
+                </div>
+
+
+
+
+                <button [disabled]="getFV['origin'].errors || getFV['destination'].errors || getFV['origin'].value==getFV['destination'].value"
+                  class="btn btn-outline-light btn-lg px-5" type="submit">Search</button>
+
+
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

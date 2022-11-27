@@ -1,0 +1,23 @@
+@import 'colors';
+@import 'variables';
+
+
+
+nav {
+    height: $nav-height;
+}
+
+li {
+    text-align: center;
+}
+
+.menu {
+    text-align: center;
+    background-color: $menu-color;
+    color: $menu-color;
+    font-size: $fond-size-menu;
+}
+
+a.text-light:hover {
+    color: $link-hover-color !important;
+}

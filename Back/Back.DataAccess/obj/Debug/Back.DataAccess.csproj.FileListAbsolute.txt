@@ -1,0 +1,15 @@
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\Back.DataAccess.dll.config
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\Back.DataAccess.dll
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\Back.DataAccess.pdb
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\obj\Debug\Back.DataAccess.csproj.AssemblyReference.cache
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\obj\Debug\Back.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\obj\Debug\Back.DataAccess.csproj.CopyComplete
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\obj\Debug\Back.DataAccess.dll
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\obj\Debug\Back.DataAccess.pdb
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.DataAccess\bin\Debug\System.Net.Http.Formatting.dll

@@ -1,0 +1,2 @@
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Front\obj\Debug\Front.esproj.SuggestedBindingRedirects.cache
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Front\obj\Debug\Front.esproj.CoreCompileInputs.cache
