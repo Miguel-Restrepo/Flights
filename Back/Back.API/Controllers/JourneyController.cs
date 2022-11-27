@@ -17,6 +17,8 @@ using System.IO;
 
 namespace Back.API.Controllers
 {
+    
+    [Route("api/Journey")]
     public class JourneyController : ApiController
     {
         
@@ -32,7 +34,28 @@ namespace Back.API.Controllers
         private double totalPrice = 0.0;
         private List<Flight> flights1Finals = new List<Flight>();
 
-
+        [HttpPost]
+        [Route("api/Journey/calculate")]
+        public async Task<IHttpActionResult> Post1(InputParameters inputParameters)
+        {
+            var flights = await flightService.GetAll();
+            Journey journey = new Journey();
+            journey.Origin = inputParameters.Origin;
+            journey.Destination = inputParameters.Destination;
+            CreateGraph(flights);
+            voy = inputParameters.Origin;
+            buscarCamino(flights, journey);
+            journey.Price = totalPrice;
+            if (inputParameters.MaxFlights > flights1Finals.Count())
+            {
+                journey.Flights = (IEnumerable<Flight>)flights1Finals;
+            }
+            else
+            {
+                journey.Flights = (IEnumerable<Flight>)flights1Finals;
+            }
+            return Ok(journey);
+        }
 
         [HttpGet]
         public async Task<IHttpActionResult> GetJourney(InputParameters inputParameters)
@@ -55,6 +78,7 @@ namespace Back.API.Controllers
             }
             return Ok(journey);
         }
+        
         public void buscarCamino(IEnumerable<Flight> flights, Journey journey)
         {
             foreach (var flight in flights)
@@ -145,6 +169,8 @@ namespace Back.API.Controllers
             public Vortex[] vertices { get; set; }
             public List<Road> roads { get; set; }
         }
+      
+      
 
 
     }

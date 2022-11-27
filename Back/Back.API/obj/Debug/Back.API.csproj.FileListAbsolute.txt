@@ -116,3 +116,6 @@ C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.API\obj\Debug\Back.
 C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.API\obj\Debug\Back.API.csproj.CopyComplete
 C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.API\obj\Debug\Back.API.dll
 C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.API\obj\Debug\Back.API.pdb
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.API\bin\System.Web.Cors.dll
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.API\bin\System.Web.Http.Cors.dll
+C:\Users\migue\Documents\pruebas_trabajos\newShore\Back\Back.API\bin\System.Web.Http.Cors.xml

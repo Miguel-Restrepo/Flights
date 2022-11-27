@@ -6,6 +6,7 @@ using Back.DataAccess.Data;
 using System.Web.Http;
 
 
+
 namespace Back.API
 {
     public partial  class Startup
@@ -15,9 +16,7 @@ namespace Back.API
             app.CreatePerOwinContext(BackContext.Create);
            
         }
-        public static void Register(HttpConfiguration config)
-        {
-            var json = config.Formatters.Remove(config.Formatters.XmlFormatter);
-        }
+        
+       
     }
 }

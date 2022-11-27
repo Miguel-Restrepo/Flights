@@ -11,11 +11,12 @@
 
 
                 <div class="form-outline form-white mb-4">
-                  <input style="text-transform:uppercase"  maxlength="3"  formControlName="origin" type="text" id="typeEmailX" class="form-control form-control-lg" />
+                  <input style="text-transform:uppercase" maxlength="3" formControlName="origin" type="text"
+                    id="typeEmailX" class="form-control form-control-lg" />
                   <label class="form-label" for="typeEmailX">Origin</label>
                   <div class="msjValidation"
                     *ngIf="(getFV['origin'].errors && (getFV['origin'].dirty || getFV['origin'].touched))">
-                    <strong>requerido</strong>
+                    <strong>required</strong>
                   </div>
                   <div class="msjValidation"
                     *ngIf="(getFV['origin'].value.length!=3 && (getFV['origin'].dirty || getFV['origin'].touched))">
@@ -23,28 +24,47 @@
                   </div>
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <input  style="text-transform:uppercase"  maxlength="3" formControlName="destination" type="text" id="typeEmailX"
-                    class="form-control form-control-lg" />
+                  <input style="text-transform:uppercase" maxlength="3" formControlName="destination" type="text"
+                    id="typeEmailX" class="form-control form-control-lg" />
                   <label class="form-label" for="typeEmailX">Destination</label>
                   <div class="msjValidation"
                     *ngIf="(getFV['destination'].errors && (getFV['destination'].dirty || getFV['destination'].touched))">
-                    <strong>requerido
+                    <strong>required
                       {{getFV['destination'].errors}}
                     </strong>
                   </div>
                   <div class="msjValidation"
-                  *ngIf="(getFV['destination'].value.length!=3 && (getFV['destination'].dirty || getFV['destination'].touched))">
-                  <strong>must be 3 in length</strong>
+                    *ngIf="(getFV['destination'].value.length!=3 && (getFV['destination'].dirty || getFV['destination'].touched))">
+                    <strong>must be 3 in length</strong>
+                  </div>
                 </div>
+                <div class="form-outline form-white mb-4">
+                  <input maxlength="3" formControlName="maxFlights" type="number"
+                    id="typeEmailX" class="form-control form-control-lg" />
+                  <label class="form-label" for="typeEmailX">Max Flights</label>
+                  <div class="msjValidation"
+                    *ngIf="(getFV['maxFlights'].errors && (getFV['maxFlights'].dirty || getFV['maxFlights'].touched))">
+                    <strong>required</strong>
+                  </div>
+                 
                 </div>
 
+                <div class="form-outline form-white mb-4">
 
-
-
-                <button [disabled]="getFV['origin'].errors || getFV['destination'].errors || getFV['origin'].value==getFV['destination'].value"
+                  <select formControlName="coint" class="form-control" name="selectAction" [(ngModel)]="selected.id"
+                    (change)="updateObj($event);">
+                    <option *ngFor="let op of coins" [ngValue]="op['id']">
+                      {{op.description}}
+                    </option>
+                  </select>
+                  <label class="form-label" for="typeEmailX">Coin</label>
+                  <div class="msjValidation" *ngIf="price>0">
+                    <strong>Price: {{price* selected.value}} {{selected.description}}</strong>
+                  </div>
+                </div>
+                <button
+                  [disabled]="getFV['maxFlights'].errors || getFV['origin'].errors || getFV['destination'].errors || getFV['origin'].value==getFV['destination'].value"
                   class="btn btn-outline-light btn-lg px-5" type="submit">Search</button>
-
-
               </div>
 
             </form>

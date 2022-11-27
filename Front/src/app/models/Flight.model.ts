@@ -9,6 +9,7 @@ export class FlightModel{
 
     }
     Transport?: TransportModel;
+    TransportID: number= 0;
     Origin: string="";
     Destination: string="";
     Price: number=0.0;

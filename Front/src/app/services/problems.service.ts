@@ -39,12 +39,12 @@ export class ProblemsService {
   }
   problem4(origin: string, destination: string, maxFlights: number): Observable<JourneyModel> {
     return this.http.post<JourneyModel>(`${this.urlBack}`, {
-      Origin: origin,
-      Destination: destination,
-      MaxFlights: maxFlights
-    }, {
-      headers: new HttpHeaders()
-    });
+                                                  Origin: origin,
+                                                  Destination: destination,
+                                                  MaxFlights: maxFlights
+                                                }, {
+                                                  headers: new HttpHeaders()
+                                                });
   }
 
 
