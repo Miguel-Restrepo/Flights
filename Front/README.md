@@ -27,10 +27,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-Pre-requisitos:
+## Pre-requisitos:
+
+
 - Tener Node JS instalado
 - Tener el Back corriendo 
-Instrucciones:
+
+
+## Instrucciones:
+
+
 1. Abrir un terminal en la carpeta Front
 2. Ejecutar npm i
 2.1. En caso de error ejecutar: npm i --force

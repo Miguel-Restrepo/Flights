@@ -33,7 +33,12 @@ namespace Back.DataAccess.Repositories.Implements
             public double price { get; set; }
         }
 
-
+        /**
+         * Metodo el cual consume la API de vuelos y me los obtiene todos Problema 2 y lo devuelve en forma del 
+         * modelo definido Problema 1
+         * @param ninguno
+         * @returns lista de vuelos
+         **/
         public async Task<IEnumerable<Flight>> GetAll()
         {
             //return await backContext.Set<Flight>().ToListAsync();

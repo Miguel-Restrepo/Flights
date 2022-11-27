@@ -18,7 +18,7 @@ namespace Back.API
                                                                 "GET, POST, OPTIONS");
             config.EnableCors(enableCorsAttribute);
                
-
+            //Configuracion para que la Rest API me responda con JSON y no con XML
             GlobalConfiguration.Configuration.Formatters.JsonFormatter.MediaTypeMappings.Add(
                                 new System.Net.Http.Formatting.RequestHeaderMapping("Accept", 
                                                                                     "text/html", 

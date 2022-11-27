@@ -17,7 +17,7 @@ using System.IO;
 
 namespace Back.API.Controllers
 {
-    
+    //Definicion de ruta
     [Route("api/Journey")]
     public class JourneyController : ApiController
     {
@@ -34,6 +34,17 @@ namespace Back.API.Controllers
         private double totalPrice = 0.0;
         private List<Flight> flights1Finals = new List<Flight>();
 
+
+
+
+        //Definicion de ruta para metodo post
+        /**
+         * Metodo de REST API el cual consulta en el servicio de la capa Business los vuelos y con ellos calcula con al funcion "buscarCamino"
+         * los vuelos que se deben tomar para ir del origin  al destination, tambien verifica la cantidad total de vuelos para 
+         * saber si cumple o no con el limite; Se hizo con POST para poderlo consumir desde Angular
+         * @param inputParameters= tiene el Origin, Destination y MaxFligths
+         * @returns retorna un objeto tipo Journey con la informacion requerida
+         * */
         [HttpPost]
         [Route("api/Journey/calculate")]
         public async Task<IHttpActionResult> Post1(InputParameters inputParameters)
@@ -57,6 +68,15 @@ namespace Back.API.Controllers
             return Ok(journey);
         }
 
+
+
+        /**
+        * Metodo de REST API el cual consulta en el servicio de la capa Business los vuelos y con ellos calcula con al funcion "buscarCamino"
+        * los vuelos que se deben tomar para ir del origin  al destination, tambien verifica la cantidad total de vuelos para 
+        * saber si cumple o no con el limite, Punto 2 y punto 3
+        * @param inputParameters= tiene el Origin, Destination y MaxFligths
+        * @returns retorna un objeto tipo Journey con la informacion requerida
+        * */
         [HttpGet]
         public async Task<IHttpActionResult> GetJourney(InputParameters inputParameters)
         {
@@ -78,7 +98,14 @@ namespace Back.API.Controllers
             }
             return Ok(journey);
         }
-        
+
+
+        /**
+        * Metodo basado en dijsktra  para encontrar un "camino" desde origin hasta el destination
+        * @param flights= lista de vuelos disponibles(consumidos de la API)
+        *         Journey= objeto con la informacion dada por el usuario inicialmente
+        * @returns nada
+        * */
         public void buscarCamino(IEnumerable<Flight> flights, Journey journey)
         {
             foreach (var flight in flights)
@@ -113,6 +140,17 @@ namespace Back.API.Controllers
             }
 
         }
+
+
+
+
+        /**
+        * Metodo de REST API el cual consulta en el servicio de la capa Business los vuelos y con ellos calcula con al funcion "buscarCamino"
+        * los vuelos que se deben tomar para ir del origin  al destination, tambien verifica la cantidad total de vuelos para 
+        * saber si cumple o no con el limite
+        * @param Flights= lista de vuelos de los que apartir de ellos se crea un grafo(clase Grap)
+        * @returns nada
+        * */
         public void CreateGraph(IEnumerable<Flight> flights)
         {
             Vortex[] vertices = { };
