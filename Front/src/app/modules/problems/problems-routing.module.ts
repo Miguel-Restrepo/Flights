@@ -1,15 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Problem2Component } from './problem2/problem2.component';
 import { Problem4Component } from './problem4/problem4.component';
 
-
+//Definicion de rutas, para el caso, solo se definio una
 const routes: Routes = [
-  {
-    path: 'problem2',
-    component: Problem2Component
-  },
-
   {
     path: 'problem4',
     component: Problem4Component

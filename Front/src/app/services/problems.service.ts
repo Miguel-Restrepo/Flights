@@ -15,6 +15,13 @@ export class ProblemsService {
   private flights: FlightModel[] = [];
   constructor(private http: HttpClient) { }
 
+  /**
+   * PROBLEMA 2
+   * Metodo que me consume la REST API de vuelos, y convierte la respuesta segun el modelo definido en el
+   * problema 1
+   * @params no existen
+   * @return FlightModel[]--> lista de vuelos devueltos por la api
+   */
   problem2(): FlightModel[] {
     this.http.get<Object[]>(`${this.urlFlights}`).subscribe({
       next: (listObjects: Object[]) => {
@@ -37,12 +44,28 @@ export class ProblemsService {
     });
     return this.flights;
   }
+
+
+  /**
+   * PROBLEMA 3 y 4
+   * Metodo que me consume la REST API del backend (.NET C#), donde se calcula atraves de Dikstra los
+   * posibles vuelos que se deben tomar para ir del origen al destino
+   
+   * @params origin= origen de 3 caracteres, 
+              destination= destino deseado de 3 caracteres y en mayuscula ambos
+              maxFlights= define el maximo de vuelos dispuestos a tomar
+   * @return Observable<JourneyModel> devuelve la promesa de un objeto de la clase JourneyModel(
+              contiene la informacion del precio total y los vuelos que debe tomar 
+   )
+   */
   problem4(origin: string, destination: string, maxFlights: number): Observable<JourneyModel> {
     return this.http.post<JourneyModel>(`${this.urlBack}`, {
                                                   Origin: origin,
                                                   Destination: destination,
                                                   MaxFlights: maxFlights
-                                                }, {
+                                                },
+                                                {
+
                                                   headers: new HttpHeaders()
                                                 });
   }

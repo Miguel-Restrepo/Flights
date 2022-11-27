@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+Pre-requisitos:
+- Tener Node JS instalado
+- Tener el Back corriendo 
+Instrucciones:
+1. Abrir un terminal en la carpeta Front
+2. Ejecutar npm i
+2.1. En caso de error ejecutar: npm i --force
+3. Ejecutar ng g 
+4. Abrir el navegador y entrar al link: http://localhost:4200/

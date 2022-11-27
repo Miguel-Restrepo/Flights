@@ -1,8 +1,6 @@
+//Import de archivos .scss para la utilizacion de sus variables(colores, tamaños y diferentes  configuraciones css)
 @import 'colors';
 @import 'variables';
-
-
-
 nav {
     height: $nav-height;
 }

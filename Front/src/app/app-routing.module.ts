@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProblemsRoutingModule } from "src/app/modules/problems/problems-routing.module";
 import { CommonModule } from '@angular/common';
-
+//Rutas de la aplicación, se hace uso de la carga perezosa parea que solo se cargen cuando sea necesario
 const routes: Routes = [
   {
     path: 'problems',

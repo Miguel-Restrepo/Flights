@@ -8,10 +8,8 @@ import { HeaderComponent } from './public/masterPage/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 @NgModule({
-  
   declarations: [
     AppComponent,
-    
     HeaderComponent
   ],
   imports: [
